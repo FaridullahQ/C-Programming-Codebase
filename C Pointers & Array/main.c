@@ -10,31 +10,33 @@ int main(int argc, char *argv[]) {
 //	How to use pointers with array?
 //	What is the relationship between them?
 //	Change the value of array though pointer.
-
-	int mynumberlist[4]={10,20,30,40};
-//	printf("Zero Index: %d\n",mynumberlist[0]);
-//	printf("Zero Index: %d",mynumberlist[3]);
-//	
+	
+	int mysubjectmarks[4]={70,80,90,100};
+	
+//	printf("%d\n",mysubjectmarks[0]);
+//	printf("%d\n",mysubjectmarks[3]);
+	
 //	int count;
-//	printf("My List of Numbers:\n"); 
-//	printf("My memory addresses list:\n"); 
 //	for(count=0;count<4;count++)
-//	printf("%d\n",mynumberlist[count]);
+//		printf("%d\n",mysubjectmarks[count]);
+	
+//	
+//	int address_count;
+//	for(address_count=0;address_count<4;address_count++)
+//	printf("%p-%d \n",&mysubjectmarks[address_count],mysubjectmarks[address_count]);
+	
+//	printf("%d\n",mysubjectmarks[0]);	
+//	printf("%p\n",&mysubjectmarks[0]);
+//		
+//	printf("%p\n",&mysubjectmarks);	
+	
+	int* mysubjectmarks_pointer=&mysubjectmarks;
+	printf("%d",*mysubjectmarks_pointer);
+	*mysubjectmarks=10;
+	printf("%d",mysubjectmarks[0]);
+	
+	
+	
 
-//	printf("Zero index/First Element: %p\n",&mynumberlist[0]);
-//	printf("%p\n", &(mynumberlist));
-//	int* my_pointer=&mynumberlist;
-//	printf("%p\n",my_pointer);
-//	printf("%p\n",(my_pointer+1));
-	int count_pointer;
-	for(count_pointer=0;count_pointer<4;count_pointer++)
-		printf("%p\n",&(my_pointer+count_pointer));
-
-	
-	
-	
-	
-	
-	
 	return 0;
 }
